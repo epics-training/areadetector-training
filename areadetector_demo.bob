@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2024-04-14 14:57:04 by epics-dev-->
+<display version="2.0.0">
+  <name>Display</name>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <class>TITLE</class>
+    <text>Sim Detector and PVA Driver demonstration</text>
+    <x use_class="true">0</x>
+    <y use_class="true">0</y>
+    <width>550</width>
+    <height>31</height>
+    <font use_class="true">
+      <font name="Header 1" family="Liberation Sans" style="BOLD" size="22.0">
+      </font>
+    </font>
+    <foreground_color use_class="true">
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <transparent use_class="true">true</transparent>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_1</name>
+    <text>Sim Det Image PV:</text>
+    <x>250</x>
+    <y>60</y>
+    <width>140</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update</name>
+    <pv_name>13SIM1:Pva1:PvName_RBV</pv_name>
+    <x>380</x>
+    <y>60</y>
+    <format>6</format>
+  </widget>
+  <widget type="image" version="2.0.0">
+    <name>Image</name>
+    <pv_name>13SIM1:Pva1:Image</pv_name>
+    <x>10</x>
+    <y>200</y>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button</name>
+    <actions>
+      <action type="open_display">
+        <file>/opt/opi/simDetector.bob</file>
+        <macros>
+          <P>13SIM1:</P>
+          <R>cam1:</R>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <x>120</x>
+    <y>50</y>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_2</name>
+    <text>Open Sim Det:</text>
+    <x>20</x>
+    <y>60</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_3</name>
+    <text>PVA Det Image PV:</text>
+    <x>250</x>
+    <y>100</y>
+    <width>140</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_1</name>
+    <pv_name>13PVA1:Pva1:PvName_RBV</pv_name>
+    <x>380</x>
+    <y>100</y>
+    <format>6</format>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_1</name>
+    <actions>
+      <action type="open_display">
+        <file>/opt/opi/ADBase.bob</file>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <x>120</x>
+    <y>90</y>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_4</name>
+    <text>Open PVA Det:</text>
+    <x>20</x>
+    <y>100</y>
+  </widget>
+  <widget type="image" version="2.0.0">
+    <name>Image_1</name>
+    <pv_name>13PVA1:Pva1:Image</pv_name>
+    <x>420</x>
+    <y>200</y>
+  </widget>
+</display>
