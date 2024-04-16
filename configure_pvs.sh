@@ -1,5 +1,8 @@
 #! /bin/bash
 
+# Set up Transform plugin
+caput 13PVA1:Trans1:Type Mirror
+
 # Default file writing settings
 caput 13SIM1:TIFF1:CreateDirectory 1
 caput -S 13SIM1:TIFF1:FilePath "\/home\/epics-dev\/Documents\/images"
